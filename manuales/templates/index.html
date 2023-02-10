@@ -1,0 +1,16 @@
+{% extends 'layouts/base.html' %}}
+
+{% block content %}
+    <div>
+       <div>
+        <div>Busqueda rapida de errores:</div>
+       </div>
+       <div>
+        <ul class="Cont-Princ-Menu">
+            {% for ele in lista %}
+            <li><p><a href="#">{{ele}} </a></p></li>
+            {% endfor %} 
+        </ul>
+       </div> 
+    </div>
+{% endblock%}

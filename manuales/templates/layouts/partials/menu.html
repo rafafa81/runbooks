@@ -1,0 +1,28 @@
+{% load static %}
+<header>
+  <div>
+    Avisos Importantes
+  </div>
+  <nav>
+    <div>
+      <img src="{% static 'img/logo.png' %} ">
+    </div>
+    <div>
+      <ul> 
+        <!-- <li> <a href="{% url 'index " > Inicio </a> </li> -->
+        <li><a href="{% url 'index " >primerElemento</a></li>
+        <li>|</li> 
+        <li><a href="{% url 'index " >segundoElemento</a></li>
+        <li>|</li>
+        <li><a href="{% url 'index " >tercerElemento</a></li>
+      </ul> 
+    </div>
+    <div>
+      <form action="get">
+        <input type="text" placeholder="  Search">
+        <!-- <input type="button" value="Buscar"> -->
+      </form>
+    </div>
+    
+  </nav>
+</header>

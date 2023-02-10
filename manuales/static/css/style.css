@@ -1,0 +1,340 @@
+header {
+    display: grid;
+    height: 120px ;
+    
+}
+/* barra de mensajes */
+header > div {
+    background-color: #3A3A3D;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color:white;
+    
+    
+}
+/* base barra de navegacion */
+nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: stretch;
+    background-color: #6D993F;
+}
+/* divisiones de la barra de navegacion */
+nav > div:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    /*border: 1px solid black;*/
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+nav > div:nth-child(2) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav > div:nth-child(3) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* logo header */
+nav > div > img {
+    width: 18rem;
+    height: 6rem;
+    margin-left: 8% ;
+}
+/* mennu de navegacion */
+nav > div > ul {
+    list-style-type: none;
+    padding: 0 ;
+    display: flex;
+    gap: 20px;
+}
+/* items del menus de navegacion */
+nav > div > ul > li {
+    list-style: none;
+    
+}
+/* eliminar decoraciones de los link */
+nav > div > ul > li > a {
+    color: black;
+}
+
+nav > div > ul > li > a:link{
+    text-decoration: none;
+}
+
+nav > div > ul > li > a:visited{
+    text-decoration: none;
+}
+
+nav > div > ul > li > a:hover{
+    text-decoration: none;
+    color: red;
+}
+
+nav > div > ul > li > a:active{
+    text-decoration: none;
+}
+
+/* busqueda dentro del header*/
+/*nav > div:nth-of-type(3){
+    background-color: blue;
+}*/
+nav > div > form {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-right: 80px;
+}
+
+nav > div > form > input[type=text]{
+    width: 57%;
+    box-sizing: border-box;
+    margin-right: 10px;
+    border: 2px solid black;
+    border-radius: 100px;
+}
+nav > div > form > input[type=text]:focus{
+    border: 2px solid red;
+    outline: none;
+}
+/* contenido de la section derecha */
+/* main > section {
+    background-color: purple;
+} */
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 3.5fr 1fr;
+    grid-template-rows: 100px 300fr 1fr;
+}
+section > div {
+    height: 400px;
+    width: 100%;
+    /* background-color: blue; */
+    grid-row: 2;
+    grid-column: 2;
+    display:grid;
+    grid-row: 1fr 1fr;
+    position: sticky;
+    top:30px;
+}
+section > div > div {
+    height: 140px;
+    width: 100%;
+    background-color: #6D993F;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+section > div > div > form {
+    /* background-color: blueviolet; */
+    width: 80%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    gap: 20px 3px;
+    position: relative;
+    top:20px;
+    
+}
+/* modificaciones a boton por separado */
+section > div > div > form > input[type=button] {
+    grid-column: 2;
+    width: 60%;
+    justify-self: end;
+    position: relative;
+    top:8px;
+    left:15px
+}
+
+
+/* contenido de los manuales */
+main {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 4fr 1.4fr;
+}
+main > div {
+    display: flex;
+    
+    flex-direction: column;
+    
+} 
+ main > div > div:nth-of-type(1){
+    display: grid;
+    grid-template-columns: 1fr 25fr 1fr;
+    height: 65px;
+   
+
+ }
+ main > div > div:nth-of-type(1) > div {
+    grid-column: 2;
+    align-self: end;
+    font-size: 25px;
+    color: #6D993F ;
+    font-weight: bold;
+ }
+
+main > div > div:nth-of-type(2){
+    display: grid;
+    margin-top: 15px;
+    grid-template-columns: 1fr 20fr 1fr;
+    
+    
+    
+}
+/* acomoda el ul del index nada mas */
+main > div > div > .Cont-Princ-Menu {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    /* row-gap: 0px; */
+}
+
+main > div > div >ul > li{
+    list-style: none;
+    font-size: 18px;
+}
+/* contenedor de el contenido que se separa en warning/caution/contenido */
+main > div > div > .Cont-Princ-Menu-Manuales {
+    grid-column: 2;
+    display: grid;
+    row-gap: 10px;
+    
+}
+
+/* configuracion de los caution y warning blocks */
+.warningBox {
+    width: 100%;
+    background-color: #EC8888;
+    border: solid 4px #F33939;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.warningBox > div:nth-of-type(1){
+    height: auto;
+    width: 100px;
+    background-color: #F33939;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+    top: -15px;
+    left: 50px;
+}
+.warningBox > div:nth-of-type(2){
+    position:relative;
+    top: -15px;
+    padding-left: 25px;
+    padding-right: 15px;
+}
+.cautionBox {
+    width: 100%;
+    background-color: #FFEBA1;
+    border: solid 4px #FFCA00;
+}
+.cautionBox > div:nth-of-type(1){
+    height: auto;
+    width: 100px;
+    background-color: #FFCA00;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+    top: -15px;
+    left: 50px;
+}
+.cautionBox > div:nth-of-type(2){
+    position:relative;
+    top: -15px;
+    padding-left: 25px;
+    padding-right: 15px;
+}
+
+
+/* footer */
+footer > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min-content;
+}
+footer > div:nth-of-type(2){
+    background-color: #6D993F;
+    width: 100%;
+    height: 200px;
+    /* position: fixed;  
+    left: 0;
+    bottom:0; */
+}
+/* dividimos en 3 el footer */
+footer > div > div{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+/* configuracion del espacio de en medio */
+footer > div > div > form {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 2fr 2fr min-content min-content;
+    grid-template-rows: auto;
+    grid-template-areas: "label label label label"
+                         "texto texto texto texto"
+                         ". labelSub textoSub botonSub";
+}
+
+/* elementos de footer */
+.labelSubIncArriba {
+    grid-area: label;
+    margin-bottom: 8px;
+    
+}
+.textoProbInc {
+    grid-area: texto;
+    margin-bottom: 8px;
+    
+}
+.labelSubInc {
+    grid-area: labelSub;
+    justify-self: end;
+    align-self: center;
+    margin-right: 8px;
+    /* background-color: red; */
+    
+}
+.textoSubInc {
+    grid-area: textoSub;
+    /* background-color: blue; */
+    justify-self: end;
+    
+}
+.botonSubInc {
+    grid-area: botonSub;
+    justify-self: end;
+    width: 65px;
+    margin-left: 8px;
+    /* background-color: brown; */
+    
+}
+/* separado de la parte superior del footer */
+footer > div:nth-of-type(1){
+    /* background-color: red; */
+    width: 100%;
+    height: 20px;
+}
+
